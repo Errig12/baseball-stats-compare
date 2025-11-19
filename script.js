@@ -17,7 +17,7 @@ const player2Header = document.getElementById("player2Header");
 // MLB Stats API
 const MLB_BASE_URL = "https://statsapi.mlb.com/api/v1";
 const SPORT_ID = 1; // MLB
-const SEASON = "2024";
+const SEASON = "2025";
 
 // State
 let player1Stats = null;
