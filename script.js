@@ -36,7 +36,6 @@ const STAT_ROWS = [
   { label: "SLG", key: "slg", type: "3dec" },
   { label: "OPS", key: "ops", type: "3dec" },
   { label: "Hits", key: "hits", type: "int" },
-  { label: "Doubles", key: "doubles", type: "int" },
   { label: "HR", key: "homeRuns", type: "int" },
   { label: "RBI", key: "rbi", type: "int" },
   { label: "Runs", key: "runs", type: "int" },
