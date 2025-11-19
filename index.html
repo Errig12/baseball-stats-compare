@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Compare Player Stats!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <h1>Compare Player Stats!</h1>
+
+      <!-- Two player search panels -->
+      <div class="players-grid">
+        <div class="player-panel">
+          <h2>Player 1</h2>
+          <div class="controls">
+            <label for="searchInput1">Search:</label>
+            <input
+              id="searchInput1"
+              type="text"
+              placeholder="Type a name (e.g. Aaron)"
+            />
+            <button id="searchButton1">Search</button>
+          </div>
+          <ul id="resultsList1" class="results-list"></ul>
+        </div>
+
+        <div class="player-panel">
+          <h2>Player 2</h2>
+          <div class="controls">
+            <label for="searchInput2">Search:</label>
+            <input
+              id="searchInput2"
+              type="text"
+              placeholder="Type a name (e.g. Maccanico)"
+            />
+            <button id="searchButton2">Search</button>
+          </div>
+          <ul id="resultsList2" class="results-list"></ul>
+        </div>
+      </div>
+
+      <!-- Status / messages -->
+      <div id="statusMessage" class="status"></div>
+
+      <!-- Comparison table -->
+      <table id="statsTable" class="stats-table">
+        <thead>
+          <tr>
+            <th>Stat</th>
+            <th id="player1Header">Player 1</th>
+            <th id="player2Header">Player 2</th>
+          </tr>
+        </thead>
+        <tbody id="statsBody">
+          <!-- Filled dynamically -->
+        </tbody>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
