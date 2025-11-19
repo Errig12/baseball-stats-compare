@@ -36,11 +36,13 @@ const STAT_ROWS = [
   { label: "SLG", key: "slg", type: "3dec" },
   { label: "OPS", key: "ops", type: "3dec" },
   { label: "Hits", key: "hits", type: "int" },
+  { label: "Doubles", key: "doubles", type: "int" },
   { label: "HR", key: "homeRuns", type: "int" },
   { label: "RBI", key: "rbi", type: "int" },
   { label: "Runs", key: "runs", type: "int" },
   { label: "SB", key: "stolenBases", type: "int" },
 ];
+
 
 function formatValue(value, type) {
   if (value === null || value === undefined) return "-";
@@ -246,7 +248,7 @@ async function loadPlayerStats(slot, playerMeta) {
     const split = (statsRoot.splits || [])[0] || {};
     const stat = split.stat || {};
 
-    const payload = {
+        const payload = {
       name: person.fullName || playerMeta.name,
       games: stat.gamesPlayed ?? stat.games ?? null,
       atBats: stat.atBats ?? null,
@@ -255,6 +257,7 @@ async function loadPlayerStats(slot, playerMeta) {
       slg: stat.slg ?? null,
       ops: stat.ops ?? null,
       hits: stat.hits ?? null,
+      doubles: stat.doubles ?? null,              // 👈 new field
       homeRuns: stat.homeRuns ?? stat.hr ?? null,
       rbi: stat.rbi ?? null,
       runs: stat.runs ?? null,
